@@ -26,14 +26,14 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-all ${
+      className={`fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl transition-all ${
         scrolled
-          ? 'bg-background/90 border-border/60 shadow-[0_10px_30px_hsl(var(--foreground)/0.06)]'
-          : 'bg-background/70 border-border/40'
+          ? 'border-border/60 bg-background/90 shadow-[0_10px_30px_hsl(var(--foreground)/0.06)]'
+          : 'border-border/40 bg-background/70'
       }`}
     >
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between gap-4">
-        <Link to="/" className="text-xl font-semibold text-foreground hover:text-accent transition-colors">
+      <div className="container mx-auto flex items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-4">
+        <Link to="/" className="text-lg font-semibold tracking-[-0.03em] text-foreground transition-colors hover:text-accent sm:text-xl">
           Laerte Lima
         </Link>
 
@@ -89,47 +89,47 @@ const Header = () => {
             <SheetTrigger asChild>
               <button
                 type="button"
-                className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-border/50 bg-background/40 hover:bg-background/70 text-foreground transition-colors"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-foreground shadow-[0_12px_24px_rgba(3,8,24,0.18)] transition-colors hover:bg-white/10"
                 aria-label="Abrir menu"
               >
                 <Menu className="w-5 h-5" />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[320px] sm:w-[380px]">
+            <SheetContent side="right" className="w-[86vw] max-w-[360px] border-l border-white/10 bg-[hsl(224,55%,12%)]/96 px-6 backdrop-blur-xl">
               <SheetHeader>
-                <SheetTitle>Menu</SheetTitle>
+                <SheetTitle className="text-left text-lg font-semibold tracking-[-0.03em] text-foreground">Menu</SheetTitle>
               </SheetHeader>
-              <div className="mt-8 flex flex-col gap-4">
+              <div className="mt-8 flex flex-col gap-3">
                 <a
                   href="#quem-sou"
-                  className="text-base text-foreground/90 hover:text-foreground transition-colors"
+                  className="rounded-2xl border border-white/8 bg-white/5 px-4 py-3 text-base text-foreground/90 transition-colors hover:bg-white/10 hover:text-foreground"
                 >
                   Sobre
                 </a>
                 <a
                   href="#filosofia"
-                  className="text-base text-foreground/90 hover:text-foreground transition-colors"
+                  className="rounded-2xl border border-white/8 bg-white/5 px-4 py-3 text-base text-foreground/90 transition-colors hover:bg-white/10 hover:text-foreground"
                 >
                   Filosofia
                 </a>
                 <a
                   href="#missao"
-                  className="text-base text-foreground/90 hover:text-foreground transition-colors"
+                  className="rounded-2xl border border-white/8 bg-white/5 px-4 py-3 text-base text-foreground/90 transition-colors hover:bg-white/10 hover:text-foreground"
                 >
                   Missão
                 </a>
                 <Link
                   to="/with-pain-no-gain"
-                  className="text-base font-medium text-accent hover:text-accent/80 transition-colors"
+                  className="rounded-2xl border border-accent/20 bg-accent/10 px-4 py-3 text-base font-medium text-accent transition-colors hover:bg-accent/15 hover:text-accent/80"
                 >
                   With Pain No Gain
                 </Link>
-                <div className="pt-2 flex items-center gap-3">
+                <div className="pt-4 flex items-center gap-3">
                   <a
                     href="https://instagram.com/seuusuario"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-muted/20 hover:bg-muted/35 border border-border/50 text-muted-foreground hover:text-foreground transition-colors"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
                     aria-label="Abrir Instagram"
                   >
                     <Instagram className="w-5 h-5" />
@@ -138,7 +138,7 @@ const Header = () => {
                     href="https://wa.me/55SEUNUMERO"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-muted/20 hover:bg-muted/35 border border-border/50 text-muted-foreground hover:text-foreground transition-colors"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
                     aria-label="Abrir WhatsApp"
                   >
                     <WhatsAppIcon className="w-5 h-5" />
