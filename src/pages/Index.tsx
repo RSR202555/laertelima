@@ -1,6 +1,6 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import Header from '@/components/main/Header';
-import HeroSection from '@/components/main/HeroSection';
+import HeroSection from '@/components/main/HeroSectionRefined';
 import AboutSection from '@/components/main/AboutSection';
 import PhilosophySection from '@/components/main/PhilosophySection';
 import MissionSection from '@/components/main/MissionSection';

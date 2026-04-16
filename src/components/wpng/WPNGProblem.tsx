@@ -34,14 +34,14 @@ const WPNGProblem = () => {
           {/* Problem Cards */}
           <div className="space-y-8">
             {problems.map(({ Icon, text }, index) => (
-              <div 
+              <div
                 key={index}
-                className={`scroll-reveal scroll-reveal-delay-${index + 1} flex items-center gap-6 p-6 rounded-xl bg-purple-dark/30 border border-purple-deep/30`}
+                className={`scroll-reveal scroll-reveal-delay-${index + 1} flex items-center gap-6 rounded-xl border border-purple-deep/30 bg-purple-dark/30 p-6`}
               >
-                <div className="p-3 rounded-lg bg-purple-deep/50">
-                  <Icon className="w-6 h-6 text-purple-medium" strokeWidth={1.5} />
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-yellow-vibrant/35 bg-[linear-gradient(135deg,rgba(255,214,10,0.22),rgba(168,85,247,0.3))] shadow-[0_0_30px_rgba(255,214,10,0.18)] backdrop-blur-sm">
+                  <Icon className="h-8 w-8 text-foreground [filter:drop-shadow(0_0_12px_rgba(255,214,10,0.28))]" strokeWidth={1.8} />
                 </div>
-                <p className="text-xl md:text-2xl text-muted-foreground">
+                <p className="text-xl text-foreground/88 md:text-2xl">
                   {text}
                 </p>
               </div>
